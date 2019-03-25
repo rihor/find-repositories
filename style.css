@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(to left top, #753A88, #CC2B5E);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.container--insert {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+.container--insert--height {
+    transform: translate(0, -20vh);
+}
+
+.container--lista {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #753A88;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+}
+
+.insert {
+    background: #FFFFFF;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.input--github::placeholder {
+    color: #B2B2B2;
+}
+
+.input--github {
+    all: unset;
+    font-size: 32px;
+    line-height: normal;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    background: url(./img/favicon.png);
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    width: 32px;
+    height: 32px;
+}
+
+.list {
+    all: unset;
+    list-style: none;
+    margin: 15px;
+}
+
+.list--item {
+    background: #FFFFFF;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 15px;
+}

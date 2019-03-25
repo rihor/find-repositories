@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício Final</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
 </head>
-<body>
 
-    <input type="text" id="name"/>
-    <button id="search">Search repositories</button>
-    <ul id="list"></ul>
+<body>
+    <div id="container--insert" class="container--insert">
+        <div class="insert">
+            <input id="name" class="input--github" type="text" placeholder="Github username" />
+            <button id="search" class="btn"></button>
+        </div>
+    </div>
+    <div id="container--lista" class="container--lista">
+        <ul id="list" class="list"></ul>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
