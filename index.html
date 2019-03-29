@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exercício Final</title>
+        <!-- font Roboto-->
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="./img/favicon.png" type="image/png" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício Final</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
-</head>
+    <body>
+        <section id="app">
+            <div id="insert" class="insert">
+                <input
+                    id="name"
+                    class="input--search"
+                    type="text"
+                    placeholder="Github username"
+                />
+                <button id="search" class="btn"></button>
+            </div>
 
-<body>
-    <section id="app">
-        <!-- <div id="container--insert" class="container--insert"> -->
-        <div id="insert" class="insert">
-            <input id="name" class="input--search" type="text" placeholder="Github username" />
-            <button id="search" class="btn"></button>
-        </div>
-        <!-- </div> -->
-        <div id="container--lista" class="container--lista">
-            <!-- <ul id="list" class="list"></ul> -->
-        </div>
-    </section>
+            <div id="container--lista" class="container--lista"></div>
+        </section>
 
-    <script src="script.js"></script>
-</body>
-
+        <script src="script.js"></script>
+    </body>
 </html>
