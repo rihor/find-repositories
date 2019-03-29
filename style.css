@@ -5,8 +5,8 @@ body {
     padding: 0px;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: linear-gradient(to left top, #753A88, #CC2B5E);
-    font-family: Roboto;
+    background-image: linear-gradient(to left top, #753a88, #cc2b5e);
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
 }
@@ -23,27 +23,32 @@ body {
 .insert {
     display: flex;
     align-items: center;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
     padding: 25px;
     margin-bottom: 0px;
 }
 
-.input--search::placeholder {
-    color: #B2B2B2;
-}
-
-.container--lista {
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-}
-
 .input--search {
-    all: unset;
+    border: none;
+    outline: none;
     font-size: 32px;
     line-height: normal;
+}
+
+.input--search::placeholder {
+    color: #b2b2b2;
+}
+
+/* para navegador Edge */
+.input--search::-ms-input-placeholder {
+    color: #b2b2b2;
+}
+
+/* para navegador IE */
+.input--search:-ms-input-placeholder {
+    color: #b2b2b2;
 }
 
 .btn {
@@ -56,11 +61,17 @@ body {
     height: 32px;
 }
 
+.container--lista {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
 .list {
     all: unset;
     list-style: none;
     margin: 15px;
-    transition: opacity .4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .list--transition {
@@ -68,7 +79,7 @@ body {
 }
 
 .list--item {
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
     padding: 25px;
