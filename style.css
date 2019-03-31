@@ -17,7 +17,7 @@ section {
     justify-content: center;
     align-items: center;
     margin: 40px;
-    min-height: 500px;    
+    min-height: 500px;
 }
 
 #insert {
@@ -35,19 +35,21 @@ section {
     outline: none;
     font-size: 32px;
     line-height: normal;
+    display: flex;
+    align-items: center;
 }
 
-.input-search::placeholder {
+#input-username::placeholder {
     color: #b2b2b2;
 }
 
 /* para navegador Edge */
-.input-search::-ms-input-placeholder {
+#input-username::-ms-input-placeholder {
     color: #b2b2b2;
 }
 
 /* para navegador IE */
-.input-search:-ms-input-placeholder {
+#input-username:-ms-input-placeholder {
     color: #b2b2b2;
 }
 
@@ -86,4 +88,13 @@ section {
 
 .list-item-transition {
     opacity: 1;
+}
+
+@media only screen and (max-device-width: 500px) {
+    #input-username {
+        width: 90%;                        
+    }
+    #input-username::-webkit-input-placeholder{
+        font-size: 0.6em;                
+    }
 }
