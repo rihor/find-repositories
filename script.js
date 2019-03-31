@@ -1,9 +1,8 @@
-const inputDOM = document.querySelector('#name'); // input onde se insere o nome de usuario do github
-const btnSearchDOM = document.querySelector('#search'); // botao para pesquisar usuario
-const insertDOM = document.querySelector('#insert'); // <div> com o <input> e o <button>
-const containerListDOM = document.querySelector('#container--lista');
+const inputDOM = document.querySelector('#input-username'); // input onde se insere o nome de usuario do github
+const btnSearchDOM = document.querySelector('#btn-search'); // botao para pesquisar usuario
+const containerListDOM = document.querySelector('#container-lista');
 
-const ulElement = document.createElement('ul'); // cria a lista
+const ulElement = document.createElement('ul'); // a lista dos repositorios
 
 /* busca pela url e quando acabar a busca ele chama as funções resolve ou reject,
  * dependendo de qual o resultado da busca
@@ -30,12 +29,12 @@ const getRepos = url =>
 
 // esvazia a lista
 function cleanList(list) {
-    console.log('cleanList');
+    // sai da função caso a lista esteja vazia
     if (list.innerHTML == '') {
         return;
     }
+    // percorre e remove cada child da lista
     while (list.firstChild) {
-        // percorre e remove cada child da lista
         list.removeChild(list.firstChild);
     }
 }
@@ -43,16 +42,16 @@ function cleanList(list) {
 function createListItem(text) {
     let repoName = document.createTextNode(text);
     let listItem = document.createElement('li');
-    listItem.classList += ' list--item';
+    listItem.classList += ' list-item';
     listItem.appendChild(repoName);
     ulElement.appendChild(listItem);
     setInterval(() => {
         // se a classe for colocada imediatamente a transição não funciona
-        listItem.classList += ' list--item--transition';
-    }, 1);
+        listItem.classList += ' list-item-transition';
+    }, 5);
 }
 
-// muda o background do btnSearchDOM
+// muda o icone do botão
 function loading(isLoading) {
     if (isLoading) {
         btnSearchDOM.style = 'background: url(./img/loading.gif);';
@@ -81,8 +80,6 @@ function searchUserGithub(name) {
             containerListDOM.appendChild(ulElement);
             cleanList(ulElement);
 
-            // listReposDOM.classList += ' list--transition';
-
             // percorre o array de objetos e acessa o nome e então coloca uma <li> para cada item
             for (let i = 0; i < answer.length; i++) {
                 // preenche a lista
@@ -96,6 +93,5 @@ function searchUserGithub(name) {
             // exibe uma mensagem de erro, colocando uma <li> com um aviso
             cleanList(ulElement);
             createListItem('ERROR 404');
-            console.log(errorMessage);
         });
 }
