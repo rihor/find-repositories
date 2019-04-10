@@ -4,6 +4,13 @@ const containerListDOM = document.querySelector('#container-lista');
 
 const ulElement = document.createElement('ul'); // a lista dos repositorios
 
+// tecla enter pressionada
+window.addEventListener('keyup', event => {
+    if (event.key == 'Enter') {
+        btnSearchDOM.click();
+    }
+});
+
 // btnSearch on click, busca o usuario inserido na <input>
 btnSearchDOM.onclick = () => {
     searchUserGithub(inputDOM.value);
@@ -30,6 +37,7 @@ function searchUserGithub(name) {
         })
         .catch(errorMessage => {
             // exibe uma mensagem de erro, colocando uma <li> com um aviso
+            console.warn(errorMessage);
             cleanList(ulElement);
             createListItem('ERROR 404');
         });
